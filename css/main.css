@@ -1,0 +1,82 @@
+body{
+	margin: 0;
+}
+
+.error{
+  border-bottom-color: #ae3b3b;      
+  background: #fdc1c1 !important;
+  color : #ae3b3b !important; 
+}
+
+#header,#operation,#footer{
+  width: 100%;
+  height: 210px;
+  text-align: center;
+}
+
+#operation{
+	display: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+#add,#mul{
+	margin-left: 550px;
+	width: 5px;
+	display: none;
+}
+
+.btn{
+	font-style: normal;
+  margin-bottom: 10px;
+  color: #8d8c8b;
+  text-transform: uppercase; 
+
+  font-size: 20px;
+  
+  color: black;
+  font-weight: 100;
+
+  background: black;
+  padding: 15px 20px 8px 20px;
+      border-radius: 15px;
+      min-width: 150px;
+      color: white;
+      border: 0;
+      outline: none;
+
+
+
+        
+}
+
+.btn:hover{
+	background-color: #d5bb09;
+}
+
+
+.field{
+	width: 50%;
+    padding: 17px 20px 17px 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-width: 0px 0px 2px 0px;
+    outline: none;
+    font-size: 20px;
+}
+
+#msg{
+	line-height: 150px;
+	font-size: 50px;
+}
+
+#result,#additon,#multiply{
+	line-height: 200px;
+}
+
+#result{
+	font-size: 50px;
+	display: none;
+}
