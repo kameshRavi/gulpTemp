@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Glup</title>
+	<style type="text/css">#add,#mul,#operation,#result{display:none}body{margin:0}.btn,.field{margin-bottom:10px;outline:0;font-size:20px}.error{border-bottom-color:#ae3b3b;background:#fdc1c1!important;color:#ae3b3b!important}#footer,#header,#operation{width:100%;height:210px;text-align:center}a{text-decoration:none}#add,#mul{margin-left:550px;width:5px}.btn{font-style:normal;text-transform:uppercase;font-weight:100;background:#000;padding:15px 20px 8px;border-radius:15px;min-width:150px;color:#fff;border:0}.btn:hover{background-color:#d5bb09}.field{width:50%;padding:17px 20px 17px 5px;border:1px solid rgba(0,0,0,.2);border-width:0 0 2px}#msg,#result{font-size:50px}#msg{line-height:150px}#additon,#multiply,#result{line-height:200px}</style>
+<body>
+<div id="header">
+<p id="msg">Click Any One</p>
+<a href="" id="addition" class="btn">Addition</a>
+<a href="" id="multiply" class="btn">Multipication</a>
+</div>
+<div id="operation">
+<input type="text" id="boxOne" class="field" placeholder="First Number"><br><br><br>
+<input type="text" id="boxTwo" class="field" placeholder="second Number"><br><br><br>
+<a href="" id="add" class="btn">Addition</a>
+<a href="" id="mul" class="btn">Multipication</a>
+</div>
+<div id="footer">
+<span id="result"></span>
+</div>
+<script type="text/javascript">function add(){var e=+document.getElementById("boxOne").value,t=+document.getElementById("boxTwo").value;document.getElementById("result").innerHTML=e+t}function multiply(){var e=+document.getElementById("boxOne").value,t=+document.getElementById("boxTwo").value;document.getElementById("result").innerHTML=e*t}document.getElementById("boxOne").onkeypress=function(e){return e.charCode>=48&&e.charCode<=57},document.getElementById("boxTwo").onkeypress=function(e){return e.charCode>=48&&e.charCode<=57},document.getElementById("addition").onclick=function(e){e.preventDefault(),document.getElementById("mulsdf").style.display="none",document.getElementById("add").style.display="block",document.getElementById("operation").style.display="block",document.getElementById("msg").innerHTML="Enter two numbers",document.getElementById("addition").style.display="none",document.getElementById("multiply").style.display="none"},document.getElementById("multiply").onclick=function(e){e.preventDefault(),document.getElementById("add").style.display="none",document.getElementById("mul").style.display="block",document.getElementById("operation").style.display="block",document.getElementById("msg").innerHTML="Enter two numbers",document.getElementById("addition").style.display="none",document.getElementById("multiply").style.display="none"},document.getElementById("add").onclick=function(e){e.preventDefault(),document.getElementById("boxOne").value.length<1||document.getElementById("boxTwo").value.length<1?(document.getElementById("boxOne").value.length<1&&(document.getElementById("boxOne").className+=" error"),document.getElementById("boxTwo").value.length<1&&(document.getElementById("boxTwo").className+=" error")):(document.getElementById("boxOne").classList.remove("error"),document.getElementById("boxTwo").classList.remove("error"),add(),document.getElementById("add").style.display="none",document.getElementById("result").style.display="block")},document.getElementById("mul").onclick=function(e){e.preventDefault(),document.getElementById("boxOne").value.length<1||document.getElementById("boxTwo").value.length<1?(document.getElementById("boxOne").value.length<1&&(document.getElementById("boxOne").className+=" error"),document.getElementById("boxTwo").value.length<1&&(document.getElementById("boxTwo").className+=" error")):(document.getElementById("boxOne").classList.remove("error"),document.getElementById("boxTwo").classList.remove("error"),multiply(),document.getElementById("mul").style.display="none",document.getElementById("result").style.display="block")};</script>
+</body>
+</html>
